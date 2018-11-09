@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<title>Soruto Web Keyboard テスト</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="dist/soruto-WebKeyboard.css">
+	<script src="dist/soruto-WebKeyboard.js"></script>
+	<script>
+		window.onload = function() {
+			webKeyboard.add("#input", {
+				placeholder:"曲名を入力"
+			});
+			webKeyboard.add("#input2",{
+				placeholder:"歌手名を入力"				
+			});
+		}
+
+	</script>
+	<style>
+		#input,
+		#input2 {
+			width: 100%;
+			height: 1.5em;
+			border: #0058d0 1px solid;
+		}
+		.source{
+			width:100%;
+			background:#3c3c3c;
+			color:#fff;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>Soruto Web Keyboard</h2>ウェブブラウザで使える、仮想キーボード。<br><h3>サンプル</h3>
+	あなたの好きな曲<br>
+	<div id="input"></div>↑↑上の青い四角をクリックして入力...<br><br>あなたの好きな歌手
+	<div id="input2"></div>↑↑上の青い四角をクリックして入力...
+	
+	<h3>使い方</h3>
+	<div class="source">
+	&lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>window.onload = function(){<br>//要素にSoruto Web Keyboardを適用<br>//webKeyboard.add(適用する要素のセレクターの文字列)<br>webKeyboard.add("#input",{
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder:"曲名を入力...",//仮想キーボードのテキストボックスが空のときに表示する文字列<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//仮想キーボードの「OK」ボタンが押されたとき(引数には仮想キーボードで確定された文字列が入る)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onEnter:function(text){<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("入力内容:" + text);
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+		});<br>}<br>&lt;/script&gt;<br>&lt;script src="dist/soruto-WebKeyboard.js"&gt;&lt;/script&gt;<br>&lt;link rel="stylesheet" href="dist/soruto-WebKeyboard.css"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>あなたの好きな曲<br>
+	&lt;div id="input"&gt;&lt;/div&gt;<br>&lt;style&gt;<br>
+				#input {<br>
+			width: 100%;<br>
+			height: 1.5em;<br>
+			border: #0058d0 1px solid;<br>
+		}<br>
+		&lt;/style&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
+	</div>
+</body>
+
+</html>
