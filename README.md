@@ -2,7 +2,7 @@
 ウェブブラウザで使える、仮想キーボード。
 
 ### サンプル
-https://sorutoproject.github.io/Soruto-Web-Keyboard/
+https://sorutoproject.github.io/Soruto-Web-Keyboard/index.html
 
 ### 使い方
 ```
